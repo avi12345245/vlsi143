@@ -1,0 +1,7 @@
+read_verilog and_gate.v
+hierarchy -top and_gate
+
+proc
+opt
+write_verilog and_gate_synth.v
+
