@@ -1,0 +1,84 @@
+$date
+	Mon Aug  3 04:54:18 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module not_gate_tb $end
+$var wire 1 ! y $end
+$var reg 1 " a $end
+$scope module uut $end
+$var wire 1 " a $end
+$var wire 1 ! y $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0"
+1!
+$end
+#10000
+0!
+1"
+#20000
+1!
+0"
+#30000
+0!
+1"
+#40000
+1!
+0"
+#50000
+0!
+1"
+#60000
+1!
+0"
+#70000
+0!
+1"
+#80000
+1!
+0"
+#90000
+0!
+1"
+#100000
+1!
+0"
+#110000
+0!
+1"
+#120000
+1!
+0"
+#130000
+0!
+1"
+#140000
+1!
+0"
+#150000
+0!
+1"
+#160000
+1!
+0"
+#170000
+0!
+1"
+#180000
+1!
+0"
+#190000
+0!
+1"
+#200000
+1!
+0"
+#210000

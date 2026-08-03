@@ -1,0 +1,5 @@
+read_verilog nand_gate.v
+hierarchy -top nand_gate
+proc
+opt
+show

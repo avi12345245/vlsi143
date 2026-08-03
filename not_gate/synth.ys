@@ -1,0 +1,7 @@
+read_verilog not_gate.v
+hierarchy -top not_gate
+
+proc
+opt
+show
+
