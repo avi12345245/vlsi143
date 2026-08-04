@@ -1,0 +1,5 @@
+read_verilog xnor_gate.v
+hierarchy -top xnor_gate
+proc
+opt
+show

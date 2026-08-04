@@ -1,0 +1,5 @@
+read_verilog xor_gate.v
+hierarchy -top xor_gate
+proc
+opt
+show

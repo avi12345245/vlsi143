@@ -1,0 +1,6 @@
+read_verilog nor_gate.v
+hierarchy -top nor_gate
+proc
+opt
+show
+
