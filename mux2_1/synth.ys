@@ -1,0 +1,6 @@
+read_verilog mux2_1.v
+hierarchy -top mux2_1
+proc
+opt
+show
+ 
