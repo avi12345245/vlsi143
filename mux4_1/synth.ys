@@ -1,0 +1,8 @@
+read_verilog mux4_1.v
+hierarchy -top mux4_1
+proc
+opt
+stat
+show
+write_verilog mux4_1_synth.v
+
