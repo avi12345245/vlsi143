@@ -1,0 +1,6 @@
+read_verilog mux8_1.v
+hierarchy -top mux8_1
+proc
+opt
+stat
+show
