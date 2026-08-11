@@ -1,0 +1,7 @@
+read_verilog half_adder.v
+hierarchy -top half_adder
+proc
+opt
+stat
+show
+
