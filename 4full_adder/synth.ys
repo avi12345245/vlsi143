@@ -1,0 +1,6 @@
+read_verilog FA_4.v 
+hierarchy -top FA_4
+proc 
+opt 
+stat 
+show 
