@@ -1,0 +1,2 @@
+In this project we implmemeted a working 4 bit carry lookahead adder in verilog using the open source RTL package, in this project i famalirizedmyself with carry propogation and carry generation.
+Yes, this type of adders are fast as they predict carry logically but the cost of the system increaes exponentially compared to other adders.
