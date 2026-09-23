@@ -1,0 +1,6 @@
+read_verilog SR_FF.v
+hierarchy -top sr_ff
+proc
+opt
+stat
+show
