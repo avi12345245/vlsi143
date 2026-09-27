@@ -1,0 +1,76 @@
+#! /usr/bin/vvp
+:ivl_version "11.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/usr/lib/aarch64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/aarch64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/aarch64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/aarch64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/aarch64-linux-gnu/ivl/va_math.vpi";
+S_0xaaab034ff4b0 .scope module, "comp1b_tb" "comp1b_tb" 2 3;
+ .timescale -9 -12;
+v0xaaab03518ae0_0 .var "a", 0 0;
+v0xaaab03518b80_0 .var "b", 0 0;
+v0xaaab03518c50_0 .net "y", 2 0, L_0xaaab03519060;  1 drivers
+S_0xaaab034ff640 .scope module, "uut" "comp1b" 2 9, 3 1 0, S_0xaaab034ff4b0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 3 "y";
+L_0xaaab03518d50 .functor NOT 1, v0xaaab03518b80_0, C4<0>, C4<0>, C4<0>;
+L_0xaaab03518df0 .functor AND 1, v0xaaab03518ae0_0, L_0xaaab03518d50, C4<1>, C4<1>;
+L_0xaaab03518f00 .functor XOR 1, v0xaaab03518ae0_0, v0xaaab03518b80_0, C4<0>, C4<0>;
+L_0xaaab03518f70 .functor NOT 1, L_0xaaab03518f00, C4<0>, C4<0>, C4<0>;
+L_0xaaab035191f0 .functor NOT 1, v0xaaab03518ae0_0, C4<0>, C4<0>, C4<0>;
+L_0xaaab035192f0 .functor AND 1, L_0xaaab035191f0, v0xaaab03518b80_0, C4<1>, C4<1>;
+v0xaaab034eaf60_0 .net *"_ivl_10", 0 0, L_0xaaab03518f70;  1 drivers
+v0xaaab03518370_0 .net *"_ivl_15", 0 0, L_0xaaab035191f0;  1 drivers
+v0xaaab03518450_0 .net *"_ivl_17", 0 0, L_0xaaab035192f0;  1 drivers
+v0xaaab03518510_0 .net *"_ivl_2", 0 0, L_0xaaab03518d50;  1 drivers
+v0xaaab035185f0_0 .net *"_ivl_4", 0 0, L_0xaaab03518df0;  1 drivers
+v0xaaab03518720_0 .net *"_ivl_8", 0 0, L_0xaaab03518f00;  1 drivers
+v0xaaab03518800_0 .net "a", 0 0, v0xaaab03518ae0_0;  1 drivers
+v0xaaab035188c0_0 .net "b", 0 0, v0xaaab03518b80_0;  1 drivers
+v0xaaab03518980_0 .net "y", 2 0, L_0xaaab03519060;  alias, 1 drivers
+L_0xaaab03519060 .concat8 [ 1 1 1 0], L_0xaaab03518df0, L_0xaaab03518f70, L_0xaaab035192f0;
+    .scope S_0xaaab034ff4b0;
+T_0 ;
+    %vpi_call 2 17 "$dumpfile", "comp1b_tb.vcd" {0 0 0};
+    %vpi_call 2 18 "$dumpvars", 32'sb00000000000000000000000000000000, S_0xaaab034ff4b0 {0 0 0};
+    %vpi_call 2 20 "$display", "--------------------------------" {0 0 0};
+    %vpi_call 2 21 "$display", " A  B | A>B  A=B  A<B" {0 0 0};
+    %vpi_call 2 22 "$display", "--------------------------------" {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0xaaab03518ae0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0xaaab03518b80_0, 0, 1;
+    %delay 10000, 0;
+    %vpi_call 2 26 "$display", " %b  %b |  %b    %b    %b", v0xaaab03518ae0_0, v0xaaab03518b80_0, &PV<v0xaaab03518c50_0, 0, 1>, &PV<v0xaaab03518c50_0, 1, 1>, &PV<v0xaaab03518c50_0, 2, 1> {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0xaaab03518ae0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0xaaab03518b80_0, 0, 1;
+    %delay 10000, 0;
+    %vpi_call 2 30 "$display", " %b  %b |  %b    %b    %b", v0xaaab03518ae0_0, v0xaaab03518b80_0, &PV<v0xaaab03518c50_0, 0, 1>, &PV<v0xaaab03518c50_0, 1, 1>, &PV<v0xaaab03518c50_0, 2, 1> {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0xaaab03518ae0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0xaaab03518b80_0, 0, 1;
+    %delay 10000, 0;
+    %vpi_call 2 34 "$display", " %b  %b |  %b    %b    %b", v0xaaab03518ae0_0, v0xaaab03518b80_0, &PV<v0xaaab03518c50_0, 0, 1>, &PV<v0xaaab03518c50_0, 1, 1>, &PV<v0xaaab03518c50_0, 2, 1> {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0xaaab03518ae0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0xaaab03518b80_0, 0, 1;
+    %delay 10000, 0;
+    %vpi_call 2 38 "$display", " %b  %b |  %b    %b    %b", v0xaaab03518ae0_0, v0xaaab03518b80_0, &PV<v0xaaab03518c50_0, 0, 1>, &PV<v0xaaab03518c50_0, 1, 1>, &PV<v0xaaab03518c50_0, 2, 1> {0 0 0};
+    %vpi_call 2 40 "$display", "--------------------------------" {0 0 0};
+    %vpi_call 2 42 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "comp1b_tb.v";
+    "comp1b.v";
