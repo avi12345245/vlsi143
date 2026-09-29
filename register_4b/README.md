@@ -1,0 +1,1 @@
+In this regular prject we have created a 4 bit register using 4 dff and 4 2_1 mux in hwich we drive the flip flop using the mux in which we put new data on mux high and Q on mux low, a load is given on the select line of mux, when we have new data we put load to 1 and whne to store we put load to 0.
